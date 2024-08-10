@@ -1,19 +1,25 @@
 {
-    "name": "hugsbrugs/php-sftp",
-    "description": "PHP SFTP Utilities",
-    "authors": [
-        {
-            "name": "Hugo Maugey",
-            "email": "hugo@maugey.fr",
-            "homepage": "https://hugo.maugey.fr",
-            "role": "Developer"
-        }
-    ],
-    "require": {
-        "phpseclib/phpseclib": "~2.0",
-        "hugsbrugs/php-string": "^1.0"
+  "name": "php-core/sftp",
+  "description": "PHP SFTP Utilities",
+  "authors": [
+    {
+      "name": "PHPCore",
+      "email": "phpcore@relyonmail.com"
     },
-    "autoload":{
-        "psr-4": {"Hug\\": "src/Hug/"}
+    {
+      "name": "Hugo Maugey",
+      "email": "hugo@maugey.fr",
+      "homepage": "https://hugo.maugey.fr",
+      "role": "Developer"
     }
+  ],
+  "require": {
+    "php": ">=8.1",
+    "phpseclib/phpseclib": "3.0.39"
+  },
+  "autoload": {
+    "psr-4": {
+      "PHPCore\\": "src/PHPCore"
+    }
+  }
 }

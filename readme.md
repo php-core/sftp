@@ -1,8 +1,8 @@
-# php-sftp
+# SFTP library for PHP >=8.1
 
-PHP SFTP Utilities
+PHP SFTP Utilities (PHP >= 8.1)
 
-If you also need FTP : [php-ftp](https://github.com/hugsbrugs/php-ftp)
+Based on: [php-sftp](https://github.com/hugsbrugs/php-sftp)
 
 ## Dependencies :
 
@@ -12,81 +12,82 @@ phpseclib : [Github](https://github.com/phpseclib/phpseclib) - [Documentation](h
 
 Install package with composer
 ```
-composer require hugsbrugs/php-sftp
+composer require php-core/sftp
 ```
 
-In your PHP code, load librairy
+In your PHP code, load library
+
 ```php
 require_once __DIR__ . '/vendor/autoload.php';
-use Hug\Sftp\Sftp as Sftp;
+use PHPCore\SFTP\SFTP;
 ```
 
 ## Usage
 
 Test SFTP connection
 ```php
-Sftp::test($server, $user, $password, $port = 22, $timeout = 10);
+SFTP::test($server, $user, $password, $port = 22, $timeout = 10);
 ```
 
 Check if a file exists on SFTP Server
 ```php
-Sftp::is_file($server, $user, $password, $remote_file, $port = 22, $timeout = 10);
+SFTP::isFile($server, $user, $password, $remoteFile, $port = 22, $timeout = 10);
 ```
 
 Delete a file on remote FTP server
 ```php
-Sftp::delete($server, $user, $password, $remote_file, $port = 22, $timeout = 10);
+SFTP::delete($server, $user, $password, $remoteFile, $port = 22, $timeout = 10);
 ```
 
-Recursively deletes files and folder in given directory (If remote_path ends with a slash delete folder content otherwise delete folder itself)
+Recursively deletes files and folder in given directory (If remotePath ends with a slash delete folder content otherwise delete folder itself)
 ```php
-Sftp::rmdir($server, $user, $password, $remote_path, $port = 22, $timeout = 10);
+SFTP::rmdir($server, $user, $password, $remotePath, $port = 22, $timeout = 10);
 ```
 
-Recursively copy files and folders on remote SFTP server (If local_path ends with a slash upload folder content otherwise upload folder itself)
+Recursively copy files and folders on remote SFTP server (If localPath ends with a slash upload folder content otherwise upload folder itself)
 ```php
-Sftp::upload_dir($server, $user, $password, $local_path, $remote_path, $port = 22, $timeout = 10);
+SFTP::uploadDir($server, $user, $password, $localPath, $remotePath, $port = 22, $timeout = 10);
 ```
 
 Download a file from remote SFTP server
 ```php
-Sftp::download($server, $user, $password, $remote_file, $local_file, $port = 22, $timeout = 10);
+SFTP::download($server, $user, $password, $remoteFile, $localFile, $port = 22, $timeout = 10);
 ```
 
-Download a directory from remote FTP server (If remote_dir ends with a slash download folder content otherwise download folder itself)
+Download a directory from remote FTP server (If remoteDir ends with a slash download folder content otherwise download folder itself)
 ```php
-Sftp::download_dir($server, $user, $password, $remote_dir, $local_dir, 
+SFTP::downloadDir($server, $user, $password, $remoteDir, $localDir, 
 $port = 22, $timeout = 10);
 ```
 
 Rename a file on remote SFTP server
 ```php
-Sftp::rename($server, $user, $password, $old_file, $new_file, $port = 22, $timeout = 10);
+SFTP::rename($server, $user, $password, $oldFile, $newFile, $port = 22, $timeout = 10);
 ```
 
 Create a directory on remote SFTP server
 ```php
-Sftp::mkdir($server, $user, $password, $directory, $port = 22, $timeout = 10);
+SFTP::mkdir($server, $user, $password, $directory, $port = 22, $timeout = 10);
 ```
 
 Create a file on remote SFTP server
 ```php
-Sftp::touch($server, $user, $password, $remote_file, $content, $port = 22, $timeout = 10);
+SFTP::touch($server, $user, $password, $remoteFile, $content, $port = 22, $timeout = 10);
 ```
 
 Upload a file on SFTP server
 ```php
-Sftp::upload($server, $user, $password, $local_file, $remote_file = '', $port = 22, $timeout = 10);
+SFTP::upload($server, $user, $password, $localFile, $remoteFile = '', $port = 22, $timeout = 10);
 ```
 
 List files on SFTP server
 ```php
-Sftp::scandir($server, $user, $password, $path, $port = 22, $timeout = 10);
+SFTP::scandir($server, $user, $password, $path, $port = 22, $timeout = 10);
 ```
 
 Get default login SFTP directory aka pwd
 ```php
-Sftp::pwd($server, $user, $password, $port = 22, $timeout = 10);
+SFTP::pwd($server, $user, $password, $port = 22, $timeout = 10);
 ```
 
 ## Tests
@@ -102,4 +103,4 @@ PHPUnit Tests
 
 ## Author
 
-Hugo Maugey [visit my website ;)](https://hugo.maugey.fr)
+[PHPCore](https://github.com/php-core)

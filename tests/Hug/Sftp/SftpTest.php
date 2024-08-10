@@ -3,20 +3,20 @@
 # For PHP7
 // declare(strict_types=1);
 
-// namespace Hug\Tests\Sftp;
+// namespace PHPCore\Tests\SFTP;
 
 use PHPUnit\Framework\TestCase;
 
-use Hug\Sftp\Sftp as Sftp;
+use PHPCore\SFTP\SFTP as Sftp;
 
 /**
  *
  */
 final class SftpTest extends TestCase
-{    
+{
 
     /* ************************************************* */
-    /* ******************* Sftp::test ****************** */
+    /* ******************* SFTP::test ****************** */
     /* ************************************************* */
 
     /**
@@ -24,12 +24,12 @@ final class SftpTest extends TestCase
      */
     public function testCanTest()
     {
-        $test = Sftp::test($server, $user, $password, $port);
+        $test = SFTP::test($server, $user, $password, $port);
         $this->assertTrue($test);
     }
 
     /* ************************************************* */
-    /* ****************** Sftp::is_file **************** */
+    /* ****************** SFTP::is_file **************** */
     /* ************************************************* */
 
     /**
@@ -37,12 +37,12 @@ final class SftpTest extends TestCase
      */
     public function testCanIsFile()
     {
-        $test = Sftp::is_file($server, $user, $password, $remote_file, $port);
+        $test = SFTP::is_file($server, $user, $password, $remote_file, $port);
         $this->assertTrue($test);
     }
 
     /* ************************************************* */
-    /* ****************** Sftp::delete ***************** */
+    /* ****************** SFTP::delete ***************** */
     /* ************************************************* */
 
     /**
@@ -50,12 +50,12 @@ final class SftpTest extends TestCase
      */
     public function testCanDelete()
     {
-        $test = Sftp::delete($server, $user, $password, $remote_file, $port);
+        $test = SFTP::delete($server, $user, $password, $remote_file, $port);
         $this->assertTrue($test);
     }
 
     /* ************************************************* */
-    /* ****************** Sftp::rmdir ****************** */
+    /* ****************** SFTP::rmdir ****************** */
     /* ************************************************* */
 
     /**
@@ -63,12 +63,12 @@ final class SftpTest extends TestCase
      */
     public function testCanRmdir()
     {
-        $test = Sftp::rmdir($server, $user, $password, $remote_path, $port);
+        $test = SFTP::rmdir($server, $user, $password, $remote_path, $port);
         $this->assertTrue($test);
     }
 
     /* ************************************************* */
-    /* **************** Sftp::upload_dir *************** */
+    /* **************** SFTP::upload_dir *************** */
     /* ************************************************* */
 
     /**
@@ -76,12 +76,12 @@ final class SftpTest extends TestCase
      */
     public function testCanUploadDir()
     {
-        $test = Sftp::upload_dir($server, $user, $password, $local_path, $remote_path, $port);
+        $test = SFTP::upload_dir($server, $user, $password, $local_path, $remote_path, $port);
         $this->assertTrue($test);
     }
 
     /* ************************************************* */
-    /* ***************** Sftp::download **************** */
+    /* ***************** SFTP::download **************** */
     /* ************************************************* */
 
     /**
@@ -89,12 +89,12 @@ final class SftpTest extends TestCase
      */
     public function testCanDownload()
     {
-        $test = Sftp::download($server, $user, $password, $remote_file, $local_file, $port);
+        $test = SFTP::download($server, $user, $password, $remote_file, $local_file, $port);
         $this->assertTrue($test);
     }
 
     /* ************************************************* */
-    /* *************** Sftp::download_dir ************** */
+    /* *************** SFTP::download_dir ************** */
     /* ************************************************* */
 
     /**
@@ -102,12 +102,12 @@ final class SftpTest extends TestCase
      */
     public function testCanDownloadDir()
     {
-        $test = Sftp::download_dir($server, $user, $password, $remote_dir, $local_dir, $port);
+        $test = SFTP::download_dir($server, $user, $password, $remote_dir, $local_dir, $port);
         $this->assertTrue($test);
     }
 
     /* ************************************************* */
-    /* ****************** Sftp::rename ***************** */
+    /* ****************** SFTP::rename ***************** */
     /* ************************************************* */
 
     /**
@@ -115,12 +115,12 @@ final class SftpTest extends TestCase
      */
     public function testCanRename()
     {
-        $test = Sftp::rename($server, $user, $password, $old_file, $new_file, $port);
+        $test = SFTP::rename($server, $user, $password, $old_file, $new_file, $port);
         $this->assertTrue($test);
     }
 
     /* ************************************************* */
-    /* ******************* Sftp::mkdir ***************** */
+    /* ******************* SFTP::mkdir ***************** */
     /* ************************************************* */
 
     /**
@@ -128,12 +128,12 @@ final class SftpTest extends TestCase
      */
     public function testCanMkdir()
     {
-        $test = Sftp::mkdir($server, $user, $password, $directory, $port);
+        $test = SFTP::mkdir($server, $user, $password, $directory, $port);
         $this->assertTrue($test);
     }
 
     /* ************************************************* */
-    /* ******************* Sftp::touch ***************** */
+    /* ******************* SFTP::touch ***************** */
     /* ************************************************* */
 
     /**
@@ -141,12 +141,12 @@ final class SftpTest extends TestCase
      */
     public function testCanTouch()
     {
-        $test = Sftp::touch($server, $user, $password, $remote_file, $content, $port);
+        $test = SFTP::touch($server, $user, $password, $remote_file, $content, $port);
         $this->assertTrue($test);
     }
 
     /* ************************************************* */
-    /* ****************** Sftp::upload ***************** */
+    /* ****************** SFTP::upload ***************** */
     /* ************************************************* */
 
     /**
@@ -154,12 +154,12 @@ final class SftpTest extends TestCase
      */
     public function testCanUpload()
     {
-        $test = Sftp::upload($server, $user, $password, $local_file, $remote_file = '', $port);
+        $test = SFTP::upload($server, $user, $password, $local_file, $remote_file = '', $port);
         $this->assertTrue($test);
     }
 
     /* ************************************************* */
-    /* ****************** Sftp::scandir **************** */
+    /* ****************** SFTP::scandir **************** */
     /* ************************************************* */
 
     /**
@@ -167,13 +167,13 @@ final class SftpTest extends TestCase
      */
     public function testCanScandir()
     {
-        $test = Sftp::scandir($server, $user, $password, $path, $port);
+        $test = SFTP::scandir($server, $user, $password, $path, $port);
         $this->assertTrue($test);
     }
 
 
     /* ************************************************* */
-    /* ******************** Sftp::pwd ****************** */
+    /* ******************** SFTP::pwd ****************** */
     /* ************************************************* */
 
     /**
@@ -181,7 +181,7 @@ final class SftpTest extends TestCase
      */
     public function testCanPwd()
     {
-        $test = Sftp::pwd($server, $user, $password, $port);
+        $test = SFTP::pwd($server, $user, $password, $port);
         $this->assertTrue($test);
     }
 
