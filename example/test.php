@@ -56,7 +56,7 @@ var_dump($test);
 
 # Test file exist
 $remote_file = $FtpPath . '/test-renamed.txt';
-$test = SFTP::is_file($FtpServer, $FtpUser, $FtpPass, $remote_file, $FtpPort);
+$test = SFTP::isFile($FtpServer, $FtpUser, $FtpPass, $remote_file, $FtpPort);
 echo "is_file";
 var_dump($test);
 
@@ -73,7 +73,7 @@ var_dump($test);
 // if no slash end upload dir itself
 $local_path = __DIR__ . '/../src';
 $remote_path = $FtpPath;
-$test = SFTP::upload_dir($FtpServer, $FtpUser, $FtpPass, $local_path, $remote_path, $FtpPort);
+$test = SFTP::uploadDir($FtpServer, $FtpUser, $FtpPass, $local_path, $remote_path, $FtpPort);
 echo "upload_dir";
 var_dump($test);
 
@@ -82,7 +82,7 @@ var_dump($test);
 // if no slash end download dir itself
 $remote_dir = $FtpPath . '/src';
 $local_dir = __DIR__;
-$test = SFTP::download_dir($FtpServer, $FtpUser, $FtpPass, $remote_dir, $local_dir, $FtpPort);
+$test = SFTP::downloadDir($FtpServer, $FtpUser, $FtpPass, $remote_dir, $local_dir, $FtpPort);
 var_dump($test);
 
 # Delete Folder
