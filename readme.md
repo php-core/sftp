@@ -101,6 +101,9 @@ php example/test.php
 
 PHPUnit Tests
 
+## License
+MIT
+
 ## Author
 
 [PHPCore](https://github.com/php-core)
