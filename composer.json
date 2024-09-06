@@ -1,6 +1,7 @@
 {
   "name": "php-core/sftp",
   "description": "PHP SFTP Utilities",
+  "version": "0.0.1",
   "license": "MIT",
   "authors": [
     {
